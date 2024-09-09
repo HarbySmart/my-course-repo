@@ -144,7 +144,7 @@ def show_exam_result(request, course_id, submission_id):
     grade = 0
     for choice in choices:
         if choice.is_correct:
-            total_score += choice.question.grade
+            grade += choice.question.grade
     context['course'] = course
     context['grade'] = grade
     context['choices'] = choices
